@@ -1,0 +1,365 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<title>Главная</title>
+	<style>
+		.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+		    color: #495057;
+		    background-color: transparent;
+		    border-color: none;
+   			border-bottom: 3px solid #2A30B1;
+			font-weight: 700;
+			font-size: 16px;
+			color: #2A30B1;
+		}
+		.nav-tabs .nav-link {
+		    background: 0 0;
+		    border: 0px solid transparent;
+			font-weight: 400;
+			font-size: 16px;
+			color: #2F185F;
+		}
+		.gallery__images .row {
+			--bs-gutter-x: 0;
+		}
+		.g-4, .gy-4 {
+			--bs-gutter-y: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container-fluid" id="header">
+			<div class="container header__content">
+				<div class="logo">
+					<img src="{% static 'images/rsue.png' %}" alt="РГЭУ (РИНХ)" id="logo">
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-7">
+	    					<h1 class="header__title">Международная научно-практическая онлайн-олимпиада</h1>
+						</div>
+						<div class="col-5">
+							<div class="header__img">
+								<img src="{% static 'images/headband.png' %}" alt="">
+							</div>
+						</div>
+					</div>					
+				</div>
+				<a class="header__btn" href="{% url 'registration' %}">Принять участие</a>
+				<div class="container header__location">
+					<div class="row">
+						<div class="col-4">
+							<p>Место проведения онлайн-олимпиады:</p>
+						</div>
+						<div class="col-8">
+							<p>Ростовский государственный экономический университет (РИНХ), Точка кипения РГЭУ (РИНХ)
+							г. Ростов-на-Дону, ул. Б. Садовая, 69
+							</p>
+						</div>
+					</div>
+				</div>	
+    		</div>
+			<div class="container-fluid header__about">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="row">
+								<div class="col-8 header__about__h">
+									<span>Соорганизаторы</span>
+								</div>
+								<div class="col-4 header__about__h">
+									<span>При поддержке:</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-8 header__about__col">
+							<div class="row">
+								<div class="col">
+									<p>Ростовский государственный экономический университет (РИНХ)</p>
+								</div>
+								<div class="col">
+									<p>Федеральная служба по финансовому мониторингу</p>
+								</div>
+								<div class="col">
+									<p>Международный учебно-методический центр финансового мониторинга</p>
+								</div>
+								<div class="col">
+									<p>Международный сетевой институт в сфере ПОД/ФТ</p>
+								</div>
+								<div class="col">
+									<p>Ростовское региональное отделение Вольного экономического общества России</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-4 header__about__col">
+							<div class="row">
+								<div class="col">
+									<p>Аппарата полномочного представителя Президента РФ в Южном федеральном округе</p>
+								</div>
+								<div class="col">
+									<p>Правительства Ростовской области</p>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>	
+			</div>
+		</div>
+		<div class="container olimp">
+			<h3 class="olimp__h">Олимпиада включает два этапа, проводимые в заочной форме с применением дистанционных образовательных технологий:</h3>
+			<div class="container olimp__about">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<p>Первый этап представляет собой отборочный тур и предполагает выполнение индивидуальных тестовых заданий. Все участники первого этапа Олимпиады получают Сертификат установленного образца.</p>
+					</div>
+					<div class="col-12 col-md-6">
+						<div class="row">
+							<div class="col-12">
+								<p>Второй этап к участию допускаются участники Первого этапа Олимпиады, набравшие наибольшее количество баллов. Второй этап предполагает выполнение индивидуальных тестовых заданий повышенного уровня сложности и решение кейс-задания.</p>
+							</div>
+							<div class="col-12">
+								<div class="row mt-5">
+									<div class="col-12 col-md-6">
+										<p>Победители Второго этапа Олимпиады получают Дипломы Победителей (1-е, 2-е и 3-е место).</p>
+									</div>
+									<div class="col-12 col-md-6">
+										<p>Участники, набравшие наибольшее количество баллов после победителей, получают Дипломы Лауреатов.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="container cell">
+			<h2 class="style__h2">Цели</h2>
+		    <div class="menu">
+		    <nav>
+		        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+		        <button class="nav-link active" id="nav-first-tab" data-bs-toggle="tab" data-bs-target="#nav-first" type="button" role="tab" aria-controls="nav-first" aria-selected="true">
+		        	Творческие способности
+		    	</button>
+		        <button class="nav-link" id="nav-second-tab" data-bs-toggle="tab" data-bs-target="#nav-second" type="button" role="tab" aria-controls="nav-second" aria-selected="false">
+		        	Одарённые дети
+		        </button>
+		        <button class="nav-link" id="nav-third-tab" data-bs-toggle="tab" data-bs-target="#nav-third" type="button" role="tab" aria-controls="nav-third" aria-selected="false">
+		        	Научные знания
+		        </button>
+		        <button class="nav-link" id="nav-fourth-tab" data-bs-toggle="tab" data-bs-target="#nav-fourth" type="button" role="tab" aria-controls="nav-fourth" aria-selected="false">
+		        	Профессиональная ориентация
+		        </button>
+		        <button class="nav-link" id="nav-fifth-tab" data-bs-toggle="tab" data-bs-target="#nav-fifth" type="button" role="tab" aria-controls="nav-fifth" aria-selected="false">
+		        	Талантливая молодёжь
+		        </button>
+		        </div>
+		    </nav>
+		    <div class="tab-content mt-5" id="nav-tabContent">
+		        <div class="tab-pane fade show active" id="nav-first" role="tabpanel" aria-labelledby="nav-first-tab">
+			        <div class="menu-info">
+			            <div class="position-relative">
+			            	<img src="{% static 'images/shape.png' %}" alt="icon" class="custom-image-style">
+			            </div>
+			            <h1 class="menu-title">Творческие способности</h1>
+			            <p class="menu-text">Выявление и развитие у учащихся, осваивающих общеобразовательные программы основного общего и среднего общего образования, творческих способностей и интереса к научно-исследовательской деятельности
+			            </p>
+			        </div>
+		        </div>
+		        <div class="tab-pane fade" id="nav-second" role="tabpanel" aria-labelledby="nav-second-tab">
+			        <div class="menu-info">
+			            <div class="position-relative">
+			          		<img src="{% static 'images/shape.png' %}" alt="icon" class="custom-image-style">
+			            </div>
+			            <h1 class="menu-title">Одарённые дети</h1>
+			            <p class="menu-text">Выявление и развитие у учащихся, осваивающих общеобразовательные программы основного общего и среднего общего образования, творческих способностей и интереса к научно-исследовательской деятельности
+			            </p>
+			        </div>
+		        </div>
+		        <div class="tab-pane fade" id="nav-third" role="tabpanel" aria-labelledby="nav-third-tab">
+			        <div class="menu-info">
+			            <div class="position-relative">
+			            	<img src="{% static 'images/shape.png' %}" alt="icon" class="custom-image-style">
+			            </div>
+			            <h1 class="menu-title">Научные знания</h1>
+			            <p class="menu-text">Выявление и развитие у учащихся, осваивающих общеобразовательные программы основного общего и среднего общего образования, творческих способностей и интереса к научно-исследовательской деятельности
+			            </p>
+			        </div>
+		        </div>
+		        <div class="tab-pane fade" id="nav-fourth" role="tabpanel" aria-labelledby="nav-fourth-tab">
+			        <div class="menu-info">
+			            <div class="position-relative">
+			            	<img src="{% static 'images/shape.png' %}" alt="icon" class="custom-image-style">
+			            </div>
+			            <h1 class="menu-title">Профессиональная организация</h1>
+			            <p class="menu-text">Выявление и развитие у учащихся, осваивающих общеобразовательные программы основного общего и среднего общего образования, творческих способностей и интереса к научно-исследовательской деятельности
+			            </p>
+			        </div>
+		        </div>
+		        <div class="tab-pane fade justify-content-center d-flex" id="nav-fifth" role="tabpanel" aria-labelledby="nav-fifth-tab">
+			        <div class="menu-info">
+			            <div class="position-relative">
+			            	<img src="{% static 'images/shape.png' %}" alt="icon" class="custom-image-style">
+			            </div>
+			            <h1 class="menu-title">Талантливая молодёжь</h1>
+			            <p class="menu-text">Выявление и развитие у учащихся, осваивающих общеобразовательные программы основного общего и среднего общего образования, творческих способностей и интереса к научно-исследовательской деятельности
+			            </p>
+			        </div>
+		        </div>
+		    </div>
+		    </div>
+		</div>
+		<div class="container comitet">
+			<h2 class="style__h2">Программный комитет олимпиады</h2>
+		    <div class="comitet-container">
+		        <div class="row">
+			        <div class="col-6 col-md-3">
+			            <div class="thumbnail">
+			            <img class="comitet-images" src="{% static 'images/img4.png' %}" alt="Фото 1">
+			            <h3 class="comitet-title text-center">Боев Василий Юрьевич</h3>
+			            <p class="comitet-text text-center">проректор по учебной работе РГЭУ (РИНХ), заведующий кафедрой экономики региона, отраслей и предприятий РГЭУ (РИНХ), к.э.н., доцент.</p>
+			            </div>
+			        </div>
+			        <div class="col-6 col-md-3">
+			            <div class="thumbnail">
+			            <img class="comitet-images" src="{% static 'images/img6.png' %}" alt="Фото 2">
+			            <h3 class="comitet-title text-center">Жебровская Людмила Анатольевна</h3>
+			            <p class="comitet-text text-center">начальник Управления компьютеризации учебной и административной деятельности РГЭУ (РИНХ), к.э.н., доцент</p>
+			            </div>
+			        </div>
+			        <div class="col-6 col-md-3">
+			            <div class="thumbnail">
+			            <img class="comitet-images" src="{% static 'images/img7.png' %}" alt="Фото 3">
+			            <h3 class="comitet-title text-center">Молчанов Евгений Григорьевич</h3>
+			            <p class="comitet-text text-center">декан факультета Экономики и финансов РГЭУ (РИНХ), к.э.н.</p>
+			            </div>
+			        </div>
+			        <div class="col-6 col-md-3">
+			            <div class="thumbnail">
+			            <img class="comitet-images" src="{% static 'images/img8.png' %}" alt="Фото 4">
+			            <h3 class="comitet-title text-center">Андреева Ольга Валентиновна</h3>
+			            <p class="comitet-text text-center">руководитель Центра стратегических исследований социально-экономического развития Юга России</p>
+			            </div>
+			        </div>
+		        </div>
+		        <div class="row">
+			        <div class="col-6 col-md-3">
+			            <div class="thumbnail">
+			            <img class="comitet-images" src="{% static 'images/img9.png' %}" alt="Фото 5">
+			            <h3 class="comitet-title text-center">Романова Татьяна Федоровна</h3>
+			            <p class="comitet-text text-center">заведующий кафедрой финансов РГЭУ (РИНХ), д.э.н., профессор</p>
+			            </div>
+			        </div>
+		        <div class="col-6 col-md-3">
+		            <div class="thumbnail">
+		            <img class="comitet-images" src="{% static 'images/img10.png' %}" alt="Фото 6">
+		            <h3 class="comitet-title text-center">Семенюта Ольга Гетовна</h3>
+		            <p class="comitet-text text-center">заведующий кафедрой банковского дела РГЭУ (РИНХ), д.э.н., профессор</p>
+		            </div>
+		        </div>
+		        <div class="col-6 col-md-3">
+		            <div class="thumbnail">
+		            <img class="comitet-images" src="{% static 'images/img11.png' %}" alt="Фото 7">
+		            <h3 class="comitet-title text-center">Медведкина Евгения Александровна</h3>
+		            <p class="comitet-text text-center">заведующий кафедрой мировой экономики РГЭУ (РИНХ), д.э.н., доцент</p>
+		            </div>
+		        </div>
+		        <div class="col-6 col-md-3">
+		            <div class="thumbnail">
+		            <img class="comitet-images" src="{% static 'images/img12.png' %}" alt="Фото 8">
+		            <h3 class="comitet-title text-center">Мусаелян Анжелика Капреловна</h3>
+		            <p class="comitet-text text-center">заведующий кафедрой налогов и налогообложения РГЭУ (РИНХ), к.э.н., доцент</p>
+		            </div>
+		        </div>
+	        </div>
+		    </div>
+		</div>
+		<div class="container gallery">
+			<h2 class="style__h2">Фотогалерея</h2>
+		    <div class="gallery__images">
+		        <div class="row">
+			        <div class="col">
+			            <div class="row row-cols-5 row-cols-md-5 g-4">
+				            <div class="col">
+				                <img src="{% static 'images/image1.png' %}" class="img-fluid" alt="Photo 1">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image2.png' %}" class="img-fluid" alt="Photo 2">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image3.png' %}" class="img-fluid" alt="Photo 3">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image4.png' %}" class="img-fluid" alt="Photo 4">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image5.png' %}" class="img-fluid" alt="Photo 5">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image6.png' %}" class="img-fluid" alt="Photo 6">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image7.png' %}" class="img-fluid" alt="Photo 7">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image8.png' %}" class="img-fluid" alt="Photo 8">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image9.png' %}" class="img-fluid" alt="Photo 9">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image10.png' %}" class="img-fluid" alt="Photo 10">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image11.png' %}" class="img-fluid" alt="Photo 11">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image12.png' %}" class="img-fluid" alt="Photo 12">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image13.png' %}" class="img-fluid" alt="Photo 13">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image14.png' %}" class="img-fluid" alt="Photo 14">
+				            </div>
+				            <div class="col">
+				                <img src="{% static 'images/image15.png' %}" class="img-fluid" alt="Photo 15">
+				            </div>
+			            </div>
+			        </div>
+		        </div>
+		    </div>
+		</div>			
+		<div class="container-fluid contacts">
+			<h2 class="style__h2">Контакты</h2>
+			<div class="contacts__intro">
+				<div class="row">
+					<div class="col-8">
+						<p class="contacts__intro__adress">
+							г. Ростов-на-Дону, ул. Б. Садовая, 69
+						</p>	
+						<p class="contacts__intro__mesto">Ростовский государственный экономический университет (РИНХ)</p>
+						<p class="contacts__intro__author">Точка кипения РГЭУ (РИНХ)</p>
+					</div>
+					<div class="col-4">
+						<a class="contacts__intro__phone" href="tel:+7 (863) 345-40-40">+7 (863) 345-40-40</a>
+						<p class="contacts__intro__mail">fnauka@bk.ru</p>
+					</div>
+				</div>
+			</div>
+			<div class="map">
+				<img src="{% static 'images/map.png' %}" alt="">
+			</div>
+		</div>	
+	</div>	
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
